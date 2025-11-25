@@ -1,12 +1,12 @@
 <!-- repo: notifly-tech/notifly-gtm-template -->
 <!-- ref: main -->
-<!-- commit: f56d986e9e1bc2d1a65536035bb3c646e5de2ef1 -->
-<!-- generated_at: 2025-11-14T05:03:19Z -->
+<!-- commit: 7a91757140d3ec99cb4e260733c9b0f36cce4987 -->
+<!-- generated_at: 2025-11-17T10:14:02Z -->
 # Platform: Google Tag Manager Template
 
 ## /
-- [Metadata](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/metadata.yaml): Defines repository metadata (homepage, docs) and a versions list with commit SHA and changeNotes, used by release tooling and SDK indexers to reference documentation and releases.
-- [Template Cafe24 Custom Event](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/template-cafe24-custom-event.tpl): Maps template inputs (eventName, eventParams, segmentationEventParamKeys) to notifly.trackEvent via copyFromWindow; if SDK absent, enqueues a trackEvent into global __ncq using createQueue and calls data.
-- [Readme](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/README.md): Guides manual testing by instructing developers to import template.tpl into a Google Tag Manager web container's Tag Templates editor; non-code documentation with no runtime dependencies.
-- [Template.ko](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/template.ko.tpl): GTM template that injects notifly-js-sdk from CDN, obtains window.notifly, and calls public APIs (initialize, setUserId, setUserProperties, trackEvent) via data config using injectScript, copyFromWindow, gtmOnSuccess/Failure.
-- [Template](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/template.tpl): GTM template that injects notifly-js-sdk from CDN, copies window.notifly and invokes initialize/setUserId/setUserProperties/trackEvent based on 'type', using injectScript/copyFromWindow and GTM callbacks.
+- [Metadata](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/metadata.yaml): Defines template-level metadata for the Notifly GTM integration, including homepage, JavaScript SDK documentation link, and version history with associated Git commit SHAs and release notes.
+- [Template Cafe24 Custom Event](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/template-cafe24-custom-event.tpl): GTM tag template for Cafe24 that reads Notifly from `window.notifly` and calls `_notifly.
+- [Readme](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/README.md): README describing how to locally import and test the Notifly Google Tag Manager tag template (`template.tpl`) within a GTM web container via the Templates UI, including the required steps to load, import, save, and use the template.
+- [Template.ko](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/template.ko.tpl): Defines the Notifly JavaScript SDK Google Tag Manager tag template, configuring UI parameters and permissions, loading `notifly-js-sdk` via `injectScript`, and invoking `notifly.initialize`, `setUserId`, `setUserProperties`, or `trackEvent` based on the selected tag type.
+- [Template](https://raw.githubusercontent.com/notifly-tech/notifly-gtm-template/main/template.tpl): Google Tag Manager custom template that injects the Notifly JS SDK from jsDelivr and, based on the `type` parameter, calls `notifly.initialize`, `setUserId`, `setUserProperties`, or `trackEvent` with GTM-provided configuration, enforcing version regex and required initialization fields.
