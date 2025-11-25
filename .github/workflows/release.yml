@@ -54,3 +54,10 @@ jobs:
           asset_path: ./template-cafe24-custom-event.tpl
           asset_name: template-cafe24-custom-event.tpl
           asset_content_type: application/octet-stream
+
+  generate-llms:
+    needs: release
+    uses: ./.github/workflows/generate-llms.yml
+    with:
+      llm_mode: changed
+    secrets: inherit
